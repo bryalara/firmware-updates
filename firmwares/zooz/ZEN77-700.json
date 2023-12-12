@@ -1,0 +1,34 @@
+{
+	"devices": [
+		{
+			"brand": "Zooz",
+			"model": "ZEN77",
+			"manufacturerId": "0x027a",
+			"productType": "0x7000",
+			"productId": "0xa007"
+		}
+	],
+	"upgrades": [
+		{
+			"$if": "((firmwareVersion >= 1.0 && firmwareVersion < 1.03.1) || (firmwareVersion >= 10.0 && firmwareVersion < 10.40)) && productId === 0xa007",
+			"version": "10.40.1",
+			"changelog": "(Use for 1.0 hardware version only, find the hardware version on the front metal plate right above the top paddle. If your firmware reports as 2.x DO not install this file!) \n * Fixed central scene bug for control of its own load in smart bulb mode \n* Added parameter 32 to disable LED blinking when a setting is changed. See all settings here. \n* Changed the manual operation for disabling the relay (smart bulb mode): Hold the UPPER paddle for 10 seconds until the LED indicator starts blinking, then within 2 seconds, tap the upper paddle 5 times quickly to change this mode. The LED indicator will stay solid green for 3 seconds to confirm the change. \n* Improved the factory reset procedure: The switch will not lock up if the factory reset is not successful in certain scenarios.",
+			"url": "https://www.getzooz.com/firmware/ZEN77_V10R40.gbl",
+			"integrity": "sha256:dc24a5221273f4ebd8aa8464041b265a677dc01edda3a52ccc8aa8540fc0dccf"
+		},
+		{
+			"$if": "firmwareVersion >= 2.0 && firmwareVersion < 2.30 && productId === 0xa007",
+			"version": "2.30.1",
+			"changelog": "(use for 2.0 hardware version only, find the hardware version on the front metal plate right above the top paddle) \n * Fixed central scene bug for control of its own load in smart bulb mode \n* Added parameter 32 to disable LED blinking when a setting is changed. See all settings here. \n* Changed the manual operation for disabling the relay (smart bulb mode): Hold the UPPER paddle for 10 seconds until the LED indicator starts blinking, then within 2 seconds, tap the upper paddle 5 times quickly to change this mode. The LED indicator will stay solid green for 3 seconds to confirm the change. \n* Improved the factory reset procedure: The switch will not lock up if the factory reset is not successful in certain scenarios.",
+			"url": "https://www.getzooz.com/firmware/ZEN77_V02R30.gbl",
+			"integrity": "sha256:f80bde148deedc4cd61b232721225892e76b499e81dbc7422f7e8d23c69e7c65"
+		},
+		{
+			"$if": "firmwareVersion >= 3.0 && firmwareVersion < 3.20 && productId === 0xa007",
+			"version": "3.20.1",
+			"changelog": "(Use for 3.0 hardware version only, find the hardware version on the front metal plate right above the top paddle) \n * Fixed central scene bug for control of its own load in smart bulb mode \n* Added parameter 32 to disable LED blinking when a setting is changed. See all settings here. \n* Changed the manual operation for disabling the relay (smart bulb mode): Hold the UPPER paddle for 10 seconds until the LED indicator starts blinking, then within 2 seconds, tap the upper paddle 5 times quickly to change this mode. The LED indicator will stay solid green for 3 seconds to confirm the change. \n* Improved the factory reset procedure: The switch will not lock up if the factory reset is not successful in certain scenarios.",
+			"url": "https://www.getzooz.com/firmware/ZEN77_V03R20.gbl",
+			"integrity": "sha256:21bae3283a4077a15250237586a0bb60d3ed1f94fe0695026327adfbd4284939"
+		}
+	]
+}
